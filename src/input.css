@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.background {
+    background-image: url('/build/assets/images/three.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.font {
+    font-family: 'Times New Roman';
+}
+
+.dash {
+    font-family: cursive;
+}

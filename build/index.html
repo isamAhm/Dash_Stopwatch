@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Stopwatch</title>
+    <link rel="stylesheet" href="/build/css/style.css" />
+    <link rel="icon" href="/build/assets/images/clock1.png" />
+  </head>
+  <body class="background overflow-hidden">
+    <header class="flex justify-between items-center p-4">
+      <nav class="flex items-center">
+        <h1 class="text-3xl text-white pl-6 font-semibold dash">Dash</h1>
+        <img
+          class="w-10 h-10"
+          src="/build/assets/images/clock3.png"
+          alt="clock_image"
+        />
+      </nav>
+      <img
+        class="size-16 mr-6 cursor-pointer"
+        onclick="changeBackground()"
+        src="/build/assets/images/paint5.ico"
+        alt="changeBackground"
+      />
+    </header>
+    <main
+      class="flex flex-col items-center justify-center h-screen m-0 font-sans text-white"
+    >
+      <div class="stopwatch text-center mb-5">
+        <div id="display" class="text-6xl mb-5">00:00:00:00</div>
+        <div class="buttons">
+          <button
+            id="startStopBtn"
+            onclick="startStop()"
+            class="text-base px-5 py-2 m-1 font-semibold hover:bg-black hover:text-blue-500 hover:ease-in-out hover:duration-500 bg-blue-500 text-white rounded"
+          >
+            Start
+          </button>
+          <button
+            id="lapBtn"
+            onclick="lap()"
+            class="text-base px-5 py-2 m-1 font-semibold hover:bg-black hover:text-green-500 hover:ease-in-out hover:duration-500 bg-green-500 text-white rounded"
+          >
+            Lap
+          </button>
+          <button
+            id="resetBtn"
+            onclick="reset()"
+            class="text-base px-5 py-2 m-1 font-semibold hover:bg-black hover:text-red-500 hover:ease-in-out hover:duration-500 bg-red-500 text-white rounded"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+      <div
+        class="laps-list w-4/5 max-w-md h-52 overflow-y-auto border border-gray-300 p-3 shadow-xl rounded-md"
+      >
+        <ul
+          id="laps"
+          class="list-none p-5 m-0 text-center text-black font-semibold font text-3xl"
+        ></ul>
+      </div>
+      <p class="text-center text-white mt-7">
+        Copyright &copy; 2024 Dash&reg;. All rights reserved.
+      </p>
+    </main>
+    <script src="/script.js"></script>
+  </body>
+</html>
