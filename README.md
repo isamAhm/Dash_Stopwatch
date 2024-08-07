@@ -1,2 +1,3 @@
 # Dash
-A fully functional *StopWatch*
+A fully functional **StopWatch**
+
